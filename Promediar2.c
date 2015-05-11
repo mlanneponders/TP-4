@@ -1,5 +1,5 @@
-/*Informa la longitud promedio de las líneas
-* Lanneponders Yonadi,Matías
+/*Informa la longitud promedio de las lÃ­neas
+* Lanneponders Yonadi,MatÃ­as
 * 09/05/2015
 */
 
@@ -13,6 +13,7 @@ int c; /* el caracter leido */
 for(nl = 0, nc = 0; ( c = getchar()) != EOF;)
     c=='\n'?++nl:++nc;
 !feof(stdin)?perror("No se pudo seguir leyendo de la entrada debido a un error"):NULL;
-printf("Longitud promedio: %.1f\n", nc / (float)nl );
+printf("Longitud promedio: %.1f\n",nl!=0?c / (float)nl:0 );
+
 return EXIT_SUCCESS;
 }
